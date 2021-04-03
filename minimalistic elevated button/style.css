@@ -44,7 +44,7 @@ body{
                  animation:  ease-in 1s infinite reverse both running animate;
                  animation-delay: 0.3s;
 }
-.button::before{
+/* .button::before{
     content: '';
     position: absolute;
     height: 150px;
@@ -78,7 +78,7 @@ body{
     opacity: 1;
     width: 1000px;
     height: 1000px;
-}
+} */
 .button a{
     text-align: center;
     text-decoration: none;
@@ -201,12 +201,13 @@ body{
     border-radius: 50%;
     top: -50px;
     right: -50px;
-    background-color: royalblue;
+    background-color: rgb(255 235 59 / 63%);
     transition: 0.3s ease-in-out;
 }
 .button-1:hover::before{
-    transform: translateX(-225px) translateY(400px);
-    opacity: 1;
+    transform: translateX(-200px) translateY(375px);
+    height: 200px;
+    width: 200px;
 }
 .button-1::after{
     content: '';
@@ -214,18 +215,28 @@ body{
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    bottom: -50px;
-    left: -50px;
+    bottom: 100px;
+    left: -200px;
     transform: translateX(100px) translateY(200px);
-    opacity: 0;
-    background-color: skyblue;
+    background-color: #2196f3c7;
     transition: 0.3s ease-in-out;
 }
 .button-1:hover::after{
-    transform: translateX(0px) translateY(0);
-    opacity: 1;
+    transform: translateX(100px) translateY(0px);
     width: 1000px;
     height: 1000px;
-   
+    animation: blur 0.3s ease-in forwards;
+}
+
+@keyframes blur{
+    /* 0%{
+        filter: blur(0px);
+    }
+    50%{
+        filter: blur(20px);
+    }
+    100%{
+        filter: blur(50px);
+    } */
 }
 
