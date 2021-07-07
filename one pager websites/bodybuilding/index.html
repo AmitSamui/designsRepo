@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>body building</title>
+</head>
+<body>
+    <header>
+        
+            <div class="logo">
+                <h3>Amit Samui</h3>
+            </div>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        
+    </header>
+
+    <div class="wrapper">
+        <section class="image ">
+             <img src="images and vectors/aaron-brogden-9y4MaTz2Js0-unsplash.jpg" >
+        </section>
+       
+        <section class="featured ">
+            <div class="inner">
+                <div class="h1">
+                    <h1>FEATURED</h1>
+                </div>
+                <p>
+                Explore the world's premier collection of high-quality pictures—submitted by our community of talented ontributors and completely free to use for any purpose. Pictures—submitted by our community of talented contributors andco mpletely free to use for any purpose.
+                </p>
+            </div>
+        </section>
+
+        <section class="subscribe ">
+            <div class="inner-text">
+                <p>
+                    Explore the world's premier collection of high-quality.
+                </p>
+            </div>
+            <div class="panel">
+                <div class="h1">
+                    <h1>Subscribe</h1>
+                </div>
+
+                <input type="email" placeholder="E-mail adress" class="input">
+                
+                <div class="btn">
+                    <div class="svg">
+                        <svg width="10" height="24" viewBox="0 0 10 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 24V0L0 12.1165L10 24Z" fill="#000000"/>
+                        </svg>
+                    </div>
+                    <div class="text">
+                        Submit
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+            // wait until window is loaded - meaning all images, stylesheets, js, fonts, media assets, and links
+            window.addEventListener("load", function(e) {
+
+                    document.body.style.display = 'block';
+                var tl = new TimelineMax();
+
+                tl.staggerFrom('section', 2, {
+                opacity: 0,
+                scale: .5,
+                ease: Power2.easeOut
+                }, 0.2)
+
+                // show .from() initially
+                tl.staggerFrom('h1, h2', .5, {
+                opacity: 0,
+                y: -40,
+                ease: Power2.easeInOut
+                }, 0.2, "-=2")
+
+                tl.staggerFrom('.panel', 1, {
+                opacity: 0,
+                y: -40,
+                ease: Power2.easeInOut
+                }, 0.2, "-=2")
+
+                tl.staggerFrom('p', 1, {
+                opacity: 0,
+                y: -40,
+                ease: Power2.easeInOut
+                }, 0.2, "-=2")
+
+            }, false);
+        });
+
+
+        
+
+    </script>
+
+
+
+
+</body>
+</html>

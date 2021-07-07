@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0;
+   font-family: 'Montserrat', sans-serif;
+   box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    z-index: 20;
+
+}
+header .logo{
+    padding: 1rem 1rem 1rem 4rem;
+   
+}
+header .logo h3{
+    font-size: 1.5rem;
+    color: #D5E0E9;
+}
+header .nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+header .nav li{
+    padding: 1rem;
+    list-style: none;
+    color: black;
+    font-size: 18px;
+}
+header .nav li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.featured{
+    height: 60vh;
+    width: 66.5vw;
+    background: #D5E0E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.featured::before{
+content: "";
+height: 330px;
+width: 330px;
+border-radius: 50%;
+background: #C5C0C0;
+position: absolute;
+top: -155px;
+right: -95px;
+z-index: 14;
+}
+.featured::after{
+content: "";
+height: 430px;
+width: 430px;
+border-radius: 50%;
+background: #C5C0C0;
+position: absolute;
+bottom: -155px;
+left: -95px;
+z-index: 14;
+}
+.featured .inner{
+        width: 40%;
+        transform: translateX(-3rem);
+        z-index: 15;
+}
+ p{
+    padding-top: 2rem;
+ font-size: 1.2rem;
+ text-shadow: none;
+font-weight: 300;
+letter-spacing: 1px;
+}
+
+.featured .inner .h1{
+ 
+ text-shadow: none;
+ letter-spacing: 3px;
+ font-weight: bolder;
+
+}
+.featured .inner .h1 h1{
+    font-weight:bold;
+     font-size: 3rem;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 33.5% auto;
+    grid-template-rows: 60% auto;
+    grid-template-areas: 
+     "image featured"
+     "image subscribe";
+    height: 100vh;
+    width: 100vw;
+}
+.image{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+}
+.image{
+    grid-area: image;
+}
+.wrapper .subscribe{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #C5C0C0;
+    background: #0D1216;
+    border-radius: 0 18px 18px 0 ;
+    overflow: hidden;
+}
+.wrapper .subscribe .inner-text{
+    width: 30%;
+}
+.wrapper .subscribe .inner-text p{
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.wrapper .subscribe .panel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    
+} 
+.wrapper .subscribe .panel .h1 h1{
+     font-weight:bold;
+     font-size: 3rem;
+     letter-spacing: 3px;
+     margin: 2rem;
+     text-align: end;
+    
+}
+
+.wrapper .subscribe .panel .input{
+    padding: 1rem;
+    width: 500px;
+    background: #0D1216;
+    border: 1px solid #D5E0E9;
+    transform: translateX(252px);
+     text-shadow: none;
+     color: #D5E0E9;
+     font-size: 1.5rem;
+}
+
+
+.wrapper .subscribe .panel .btn{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0px;
+    padding: 1rem;
+    width: 500px;
+
+   background-color:  #D5E0E9;
+    transform: translateX(252px);
+     text-shadow: none;
+     color: #D5E0E9;
+}
+.wrapper .subscribe .panel .btn .text,
+.wrapper .subscribe .panel .btn .svg{
+    transform: translateX(-50px);
+}
+.wrapper .subscribe .panel .btn .text{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-left: 20px;
+}
+

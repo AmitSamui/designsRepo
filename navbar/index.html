@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="content">
+
+    
+    <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <div id="togglebutton">
+        <span class="indicator" id="indicator"><span class="glow"></span></span>
+    </div>
+    <nav id="nav">
+       
+            <a id="one" class="one" href="#">home</a>
+            <a id="two" class="two" href="#">about</a>   
+            <a id="three" class="three" href="#">portfolio</a> 
+            <a id="four" class="four" href="#">blog</a>   
+            <a id="five" class="five" href="#">team</a>   
+            
+        
+        <hr class="active .starthome " id="actives">
+    </nav>
+    </section>
+    <script>
+        const toggle = document.getElementById('togglebutton');
+        toggle.onclick = function(){
+            toggle.classList.toggle('activetoggle');
+            document.getElementById('nav').classList.toggle('navlight');
+            document.getElementById('actives').classList.toggle('hr-light');
+            document.getElementById('one').classList.toggle('light');
+            document.getElementById('two').classList.toggle('light');
+            document.getElementById('three').classList.toggle('light');
+            document.getElementById('four').classList.toggle('light');
+            document.getElementById('five').classList.toggle('light');
+            document.getElementById('content').classList.toggle('contentlight');
+            document.getElementById('indicator').classList.toggle('indicator-light');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gsap scroll trigger</title>
+</head>
+<body>
+
+
+    <header>
+       <h1 class="text"> This is about to begin!!!</h1>
+
+    </header>
+    <section class="fa1">
+        <div class="box1 box">
+            <h1 class="text-1">This is <span>revolution.</span>  </h1>
+            <h1 class="text-2">revolution is about to <span>begin.</span>  </h1>
+            <h1 class="text-3">This is <span>Gsap animation.</span>  </h1>
+            <h1 class="text-4">Making revolution with <span>Scroll-trigger.</span> </h1>
+        </div>
+    </section>
+    <section  class="fa2">
+        <div class="box2 box">
+            <h1 class="text-5">Did you liked the website?? </h1>
+            <h1 class="text-6">please rate us... </h1>
+            <h1 class="text-7">This is <span class="fade" >Gsap animation.</span>  </h1>
+            
+        </div>
+    </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+        <script>gsap.timeline({
+                scrollTrigger: {
+                    trigger: "header",
+                    start: "center center",
+                    end: "bottom top",
+                    
+                    scrub: true,
+                    pin: true,
+                    
+                   
+                }
+            }).from(".text" , {
+                x: innerWidth * 1,
+                opacity: 0
+            })
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".fa1",
+                    start: "center center",
+                    end: "bottom top",
+                    
+                    scrub: true,
+                    pin: true,
+                    
+                   
+                }
+            }).from(".text-1" , {x: innerWidth * 1})
+            .from(".text-2" , {x: innerWidth * -1})
+            .from(".text-3" , {x: innerWidth * 1})            
+            .from(".text-4" , {x: innerWidth * -1})
+
+
+           
+            
+
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".fa2",
+                    start: "center center",
+                    end: "bottom top",
+                    
+                    scrub: true,
+                    pin: true,
+                   
+                }
+            }).from(".text-5" , {x: innerWidth * -1})
+            .from(".text-6" , {x: innerWidth * 1})
+            .from(".fade" , {opacity: 0})           
+            
+        </script>
+
+</body>
+</html>
